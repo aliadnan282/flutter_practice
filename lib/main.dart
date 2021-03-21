@@ -1,8 +1,18 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_practice/pages/choose_location.dart';
+import 'package:flutter_practice/pages/home.dart';
+import 'package:flutter_practice/pages/loading.dart';
 
-void main() => runApp(MaterialApp(home: NinjaCard()));
+void main() => runApp(MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/': (context)=> Loading(),
+      '/home': (context) => HomeScreen(),
+      '/location': (context)=> ChooseLocation()
+    },
+));
 
 class NinjaCard extends StatefulWidget {
   @override
